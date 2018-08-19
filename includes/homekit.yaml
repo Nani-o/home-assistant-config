@@ -1,0 +1,14 @@
+---
+filter:
+  include_domains:
+    - media_player
+    - fan
+    - script
+  include_entities:
+    - switch.tv_lg
+entity_config:
+  media_player.plex:
+    feature_list:
+      - feature: on_off
+      - feature: play_pause
+...

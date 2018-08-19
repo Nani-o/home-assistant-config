@@ -1,0 +1,3 @@
+---
+state_off: scripts/state_off.sh {{ entity }}
+...

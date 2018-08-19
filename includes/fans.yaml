@@ -1,0 +1,37 @@
+---
+- platform: template
+  fans:
+    dyson_fan:
+      friendly_name: "Ventilateur"
+      value_template: "{{ states('input_boolean.state') }}"
+      speed_template: "{{ states('input_select.speed') }}"
+      oscillating_template: "{{ states('input_select.osc') }}"
+      direction_template: "{{ states('input_select.direction') }}"
+      turn_on:
+        service: !secret rm_mini_send_packet
+        data:
+          packet:
+            - 'JgBIAEkYGRgYLhguGRgYGBcYGRcYGhgYGRgYGBgYGBgYGBguGAAMyEgZGBgYLxguFxkYGBcZGBcZGRgZGBgYGRcZGBgYGBgtGAANBQ=='
+      turn_off:
+        service: !secret rm_mini_send_packet
+        data:
+          packet:
+            - 'JgBIAEkYGRgYLhguGRgYGBcYGRcYGhgYGRgYGBgYGBgYGBguGAAMyEgZGBgYLxguFxkYGBcZGBcZGRgZGBgYGRcZGBgYGBgtGAANBQ=='
+      set_speed:
+        service: script.fan_speed
+        data_template:
+          speed: "{{ speed }}"
+      set_oscillating:
+        service: !secret rm_mini_send_packet
+        data:
+          packet:
+            - 'JgAkAEoXGRgZLRktGRcZFxgYGRcZGBgZGS0ZLRkYGRcYLRkXGAANBQAAAAA='
+      set_direction:
+        service: script.fan_direction
+        data_template:
+          direction: "{{ direction }}"
+      speeds:
+        - '1'
+        - '2'
+        - '3'
+...

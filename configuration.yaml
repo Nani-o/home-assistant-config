@@ -1,0 +1,29 @@
+homeassistant:
+  name: Home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: !secret elevation
+  unit_system: metric
+  time_zone: !secret time_zone
+  customize: !include customize.yaml
+
+introduction:
+frontend:
+config:
+http:
+  api_password: !secret http_password
+discovery:
+history:
+logbook:
+sun:
+sensor:
+  - platform: yr
+
+device_tracker: !include includes/device_trackers.yaml
+fan: !include includes/fans.yaml
+media_player: !include includes/media_players.yaml
+script: !include includes/scripts.yaml
+shell_command: !include includes/shell_commands.yaml
+switch: !include includes/switches.yaml
+
+homekit: !include includes/homekit.yaml

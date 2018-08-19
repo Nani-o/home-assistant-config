@@ -1,0 +1,52 @@
+---
+tv_av1:
+  sequence:
+    - service: !secret rm_mini_send_packet
+      data:
+        packet:
+          - 'JgBIAAABIpQPFBITETgSEw8UEhQSEhEVDzgSOBAUETgQOQ84EjgRNxITETgSExA5EDgREhI3EhMROBMSEDkQFBETEjYTEhE4EQANBQ=='
+    - delay: 0:00:01
+    - service: shell_command.state_off
+      data_template:
+         entity: script.tv_av1
+tv_av2:
+  sequence:
+    - service: !secret rm_mini_send_packet
+      data:
+        packet:
+          - 'JgBIAAABH5YPFBETETgUERAUEBURFBATETgROBEUETcSNxE4ETcSOBISEBUQFREUEjUSFBA5ETcRNxE4ETkQOBAUEjcRFRAUEQANBQ=='
+    - delay: 0:00:01
+    - service: shell_command.state_off
+      data_template:
+         entity: script.tv_av2
+tv_hdmi1:
+  sequence:
+    - service: !secret rm_mini_send_packet
+      data:
+        packet:
+          - 'JgBIAAABIZMRExITEjYSExMRERURExEUEDkRNxEUEjYSNhM3ETcSNxITETgSNhI2ExMQExE4ETYSNxIUERMSExE4ETcRFBETEQANBQ=='
+    - delay: 0:00:01
+    - service: shell_command.state_off
+      data_template:
+         entity: script.tv_hdmi1
+tv_hdmi2:
+  sequence:
+    - service: !secret rm_mini_send_packet
+      data:
+        packet:
+          - 'JgBQAAABJJMSEhISETgSEhITEBMSEhMSETcSNxMREjcSNxI3EjcSOBETERITNhM2EhITERM2EzcRNxI3ExISEhI3EjcRExETEgAFLQABJEoRAA0FAAAAAAAAAAA='
+    - delay: 0:00:01
+    - service: shell_command.state_off
+      data_template:
+         entity: script.tv_hdmi2
+tv_play_pause:
+  sequence:
+    - service: !secret rm_mini_send_packet
+      data:
+        packet:
+          - 'JgBQAAABKJMSEhISEjcSEhISEhISEhISEjcSNxISEjcSNxI3EjcSNxISEhISEhISEjcSNxISEjcSNxI3EjcSNxISEhISNxISEgAFGgABKEoSAAxWDQUAAAAAAAA='
+    - delay: 0:00:01
+    - service: shell_command.state_off
+      data_template:
+         entity: script.tv_play_pause
+...
