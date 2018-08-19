@@ -1,5 +1,8 @@
 *
 !*.yaml
+!*.sh
+!includes/
+!scripts/
 !scenes
 !.gitignore
 !README.md
