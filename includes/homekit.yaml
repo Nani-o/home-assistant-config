@@ -4,6 +4,7 @@ filter:
     - media_player
     - fan
     - script
+    - device_tracker
   include_entities:
     - switch.tv_lg
 entity_config:
