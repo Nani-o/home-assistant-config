@@ -1,3 +1,4 @@
 ---
 state_off: /home/homeassistant/.homeassistant/scripts/state_off.sh {{ entity }}
+plex_scan: /home/homeassistant/.homeassistant/scripts/plex_scan.py
 ...
