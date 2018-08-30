@@ -1,6 +1,7 @@
 *
 !*.yaml
 !*.sh
+!*.py
 !includes/
 !scripts/
 !scenes
