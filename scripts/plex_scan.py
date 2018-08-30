@@ -7,7 +7,7 @@ import sys
 
 script_path = os.path.dirname(os.path.realpath(sys.argv[0]))
 
-with open('{}/../travis_secrets.yaml'.format(script_path)) as file:
+with open('{}/../secrets.yaml'.format(script_path)) as file:
     secrets = yaml.load(file)
 
 plex_ip = secrets['plex_ip']
