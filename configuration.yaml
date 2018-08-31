@@ -27,8 +27,3 @@ shell_command: !include includes/shell_commands.yaml
 switch: !include includes/switches.yaml
 
 homekit: !include includes/homekit.yaml
-
-custom_updater:
-  track: components
-  component_urls:
-    - https://raw.githubusercontent.com/robmarkcole/Hue-sensors-HASS/master/custom_updater.json
