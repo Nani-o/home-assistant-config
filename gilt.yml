@@ -1,0 +1,7 @@
+---
+- git: https://github.com/robmarkcole/Hue-sensors-HASS
+  version: master
+  files:
+    - src: custom_components/sensor/hue.py
+      dst: custom_components/sensor/
+...
