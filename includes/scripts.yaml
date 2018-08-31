@@ -155,10 +155,14 @@ tv_test:
   sequence:
     - service: script.ir_tv_hdmi2
     - service: script.ir_tv_return
+    - delay: 0:00:01
     - service: script.ir_tv_return
+    - delay: 0:00:01
     - service: script.ir_tv_return
+    - delay: 0:00:01
     - service: script.ir_tv_return
-    - service: script.ir_tv_return
+    - delay: 0:00:01
+    - service: script.ir_tv_left
     - service: script.ir_tv_left
     - service: script.ir_tv_left
     - service: script.ir_tv_left
