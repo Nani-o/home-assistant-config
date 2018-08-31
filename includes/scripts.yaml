@@ -168,7 +168,19 @@ tv_home:
     - service: script.ir_tv_return
 tv_plex:
   sequence:
-    - service: script.tv_home
+    - service: script.ir_tv_hdmi2
+    - delay:
+        milliseconds: 600
+    - service: script.ir_tv_return
+    - delay:
+        milliseconds: 300
+    - service: script.ir_tv_return
+    - delay:
+        milliseconds: 300
+    - service: script.ir_tv_return
+    - delay:
+        milliseconds: 300
+    - service: script.ir_tv_return
     - service: script.ir_tv_left
     - service: script.ir_tv_left
     - service: script.ir_tv_left
@@ -184,7 +196,19 @@ tv_plex:
          entity: script.tv_plex
 tv_youtube:
   sequence:
-    - service: script.tv_home
+    - service: script.ir_tv_hdmi2
+    - delay:
+        milliseconds: 600
+    - service: script.ir_tv_return
+    - delay:
+        milliseconds: 300
+    - service: script.ir_tv_return
+    - delay:
+        milliseconds: 300
+    - service: script.ir_tv_return
+    - delay:
+        milliseconds: 300
+    - service: script.ir_tv_return
     - service: script.ir_tv_left
     - service: script.ir_tv_left
     - service: script.ir_tv_left
