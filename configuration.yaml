@@ -29,5 +29,5 @@ switch: !include includes/switches.yaml
 homekit: !include includes/homekit.yaml
 
 custom_updater:
-  components_url: 
+  component_urls:
     - https://raw.githubusercontent.com/robmarkcole/Hue-sensors-HASS/master/custom_updater.json
