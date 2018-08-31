@@ -181,16 +181,38 @@ tv_plex:
     - delay:
         milliseconds: 300
     - service: script.ir_tv_return
+    - delay:
+        milliseconds: 300
+    - service: script.ir_tv_up
+    - delay:
+        milliseconds: 300
+    - service: script.ir_tv_up
+    - delay:
+        milliseconds: 300
+    - service: script.ir_tv_up
+    - delay:
+        milliseconds: 300
+    - service: script.ir_tv_down
+    - delay:
+        milliseconds: 300
     - service: script.ir_tv_left
+    - delay:
+        milliseconds: 300
     - service: script.ir_tv_left
+    - delay:
+        milliseconds: 300
     - service: script.ir_tv_left
+    - delay:
+        milliseconds: 300
     - service: script.ir_tv_left
+    - delay:
+        milliseconds: 300
     - service: script.ir_tv_right
-    - service: script.ir_tv_up
-    - service: script.ir_tv_up
-    - service: script.ir_tv_up
+    - delay:
+        milliseconds: 300
     - service: script.ir_tv_ok
-    - delay: 0:00:01
+    - delay:
+        milliseconds: 300
     - service: shell_command.state_off
       data_template:
          entity: script.tv_plex
@@ -209,15 +231,35 @@ tv_youtube:
     - delay:
         milliseconds: 300
     - service: script.ir_tv_return
-    - service: script.ir_tv_left
-    - service: script.ir_tv_left
-    - service: script.ir_tv_left
-    - service: script.ir_tv_left
-    - service: script.ir_tv_right
+    - delay:
+        milliseconds: 300
     - service: script.ir_tv_up
+    - delay:
+        milliseconds: 300
     - service: script.ir_tv_up
+    - delay:
+        milliseconds: 300
     - service: script.ir_tv_up
+    - delay:
+        milliseconds: 300
+    - service: script.ir_tv_down
+    - delay:
+        milliseconds: 300
+    - service: script.ir_tv_left
+    - delay:
+        milliseconds: 300
+    - service: script.ir_tv_left
+    - delay:
+        milliseconds: 300
+    - service: script.ir_tv_left
+    - delay:
+        milliseconds: 300
+    - service: script.ir_tv_left
+    - delay:
+        milliseconds: 300
     - service: script.ir_tv_ok
+    - delay:
+        milliseconds: 300
     - service: shell_command.state_off
       data_template:
          entity: script.tv_youtube
