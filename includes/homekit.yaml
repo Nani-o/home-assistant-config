@@ -3,10 +3,15 @@ filter:
   include_domains:
     - media_player
     - fan
-    - script
     - device_tracker
   include_entities:
     - switch.tv_lg
+    - script.tv_av1
+    - script.tv_av2
+    - script.tv_hdmi1
+    - script.tv_hdmi2
+    - script.tv_play_pause
+    - script.plex_scan
 entity_config:
   media_player.plex:
     feature_list:
