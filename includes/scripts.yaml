@@ -59,13 +59,13 @@ ir_tv_left:
     - service: !secret rm_mini_send_packet
       data:
         packet:
-          - 'JgBQAAABKJMSEhISEjcSEhISEhISEhISEjcSNxISEjcSNxI3EjcSNxI3EhISEhISEhISEhISEhISEhI3EjcSNxI3EjcSNxI3EgAFGgABKEoSAAxWDQUAAAAAAAA='
+          - 'JgBQAAABKJMSEhISEjcSEhISEhISEhISEjcSNxISEjcSNxI3EjcSNxI3EjcSEhISEhISEhISEhISEhISEjcSNxI3EjcSNxI3EgAFGgABKEoSAAxWDQUAAAAAAAA='
 ir_tv_right:
   sequence:
     - service: !secret rm_mini_send_packet
       data:
         packet:
-          - 'JgBQAAABKJMSEhISEjcSEhISEhISEhISEjcSNxISEjcSNxI3EjcSNxISEjcSEhISEhISEhISEhISNxISEjcSNxI3EjcSNxI3EgAFGgABKEoSAAxWDQUAAAAAAAA='
+          - 'JgBQAAABKJMSEhISEjcSEhISEhISEhISEjcSNxISEjcSNxI3EjcSNxISEjcSNxISEhISEhISEhISNxISEhISNxI3EjcSNxI3EgAFGgABKEoSAAxWDQUAAAAAAAA='
 
 ### Actual "buttons" sent to homekit
 tv_av1:
@@ -151,5 +151,22 @@ tv_right:
     - service: shell_command.state_off
       data_template:
          entity: script.tv_right
-
+tv_test:
+  sequence:
+    - service: script.ir_tv_hdmi2
+    - service: script.ir_tv_return
+    - service: script.ir_tv_return
+    - service: script.ir_tv_return
+    - service: script.ir_tv_return
+    - service: script.ir_tv_left
+    - service: script.ir_tv_left
+    - service: script.ir_tv_left
+    - service: script.ir_tv_up
+    - service: script.ir_tv_up
+    - service: script.ir_tv_up
+    - service: script.ir_tv_ok
+    - delay: 0:00:01
+    - service: shell_command.state_off
+      data_template:
+         entity: script.tv_test
 ...
