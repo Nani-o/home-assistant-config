@@ -151,21 +151,28 @@ tv_right:
     - service: shell_command.state_off
       data_template:
          entity: script.tv_right
-tv_test:
-  sequence:
+tv_home:
     - service: script.ir_tv_hdmi2
+    - delay:
+        milliseconds: 600
     - service: script.ir_tv_return
-    - delay: 0:00:01
+    - delay:
+        milliseconds: 300
     - service: script.ir_tv_return
-    - delay: 0:00:01
+    - delay:
+        milliseconds: 300
     - service: script.ir_tv_return
-    - delay: 0:00:01
+    - delay:
+        milliseconds: 300
     - service: script.ir_tv_return
-    - delay: 0:00:01
+tv_plex:
+  sequence:
+    - service: script.tv_home
     - service: script.ir_tv_left
     - service: script.ir_tv_left
     - service: script.ir_tv_left
     - service: script.ir_tv_left
+    - service: script.ir_tv_right
     - service: script.ir_tv_up
     - service: script.ir_tv_up
     - service: script.ir_tv_up
@@ -173,5 +180,20 @@ tv_test:
     - delay: 0:00:01
     - service: shell_command.state_off
       data_template:
-         entity: script.tv_test
+         entity: script.tv_plex
+tv_youtube:
+  sequence:
+    - service: script.tv_home
+    - service: script.ir_tv_left
+    - service: script.ir_tv_left
+    - service: script.ir_tv_left
+    - service: script.ir_tv_left
+    - service: script.ir_tv_right
+    - service: script.ir_tv_up
+    - service: script.ir_tv_up
+    - service: script.ir_tv_up
+    - service: script.ir_tv_ok
+    - service: shell_command.state_off
+      data_template:
+         entity: script.tv_youtube
 ...

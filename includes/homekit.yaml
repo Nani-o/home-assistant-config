@@ -12,6 +12,8 @@ filter:
     - script.tv_hdmi2
     - script.tv_play_pause
     - script.plex_scan
+    - script.tv_plex
+    - script.tv_youtube
 entity_config:
   media_player.plex:
     feature_list:
