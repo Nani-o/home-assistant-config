@@ -59,7 +59,7 @@ ir_tv_left:
     - service: !secret rm_mini_send_packet
       data:
         packet:
-          - 'JgBQAAABKJMSEhISEjcSEhISEhISEhISEjcSNxISEjcSNxI3EjcSNxI3EjcSEhISEhISEhISEhISEhISEjcSNxI3EjcSNxI3EgAFGgABKEoSAAxWDQUAAAAAAAA='
+          - 'JgBQAAABKJMSEhISEjcSEhISEhISEhISEjcSNxISEjcSNxI3EjcSNxI3EjcSNxISEhISEhISEhISEhISEhISNxI3EjcSNxI3EgAFGgABKEoSAAxWDQUAAAAAAAA='
 ir_tv_right:
   sequence:
     - service: !secret rm_mini_send_packet
@@ -154,6 +154,7 @@ tv_right:
 tv_test:
   sequence:
     - service: script.ir_tv_hdmi2
+    - service: script.ir_tv_return
     - service: script.ir_tv_return
     - service: script.ir_tv_return
     - service: script.ir_tv_return
