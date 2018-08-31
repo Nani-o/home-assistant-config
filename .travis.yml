@@ -7,6 +7,8 @@ python:
 
 before_install:
   - mv travis_secrets.yaml secrets.yaml
+  - mkdir custom_components
+  - wget https://raw.githubusercontent.com/custom-components/custom_updater/master/custom_components/custom_updater.py -O custom_components/custom_updater.py
 install:
   - pip3 install homeassistant
 script:
