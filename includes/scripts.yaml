@@ -152,6 +152,7 @@ tv_right:
       data_template:
          entity: script.tv_right
 tv_home:
+  sequence:
     - service: script.ir_tv_hdmi2
     - delay:
         milliseconds: 600
