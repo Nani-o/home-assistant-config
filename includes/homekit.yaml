@@ -12,8 +12,6 @@ filter:
     - script.tv_hdmi2
     - script.tv_play_pause
     - script.plex_scan
-    - script.tv_plex
-    - script.tv_youtube
     - script.atv_home
     - script.atv_plex
     - script.atv_youtube
