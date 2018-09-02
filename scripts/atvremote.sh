@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SCRIPT_PATH=$(dirname $0)
-LOGIN_ID=$(grep 'atv_login_id:' ${SCRIPT_PATH}/../secrets.yaml | awk '{print $2}')
+LOGIN_ID=$(grep 'atv_login_id:' ${SCRIPT_PATH}/../secrets.yaml | awk '{print $2}' | cut -d "'" -f 2)
 ADDRESS=$(grep 'atv_ip:' ${SCRIPT_PATH}/../secrets.yaml | awk '{print $2}')
 AIRPLAY_CREDENTIALS=$(grep 'atv_airplay_credentials:' ${SCRIPT_PATH}/../secrets.yaml | awk '{print $2}')
 
