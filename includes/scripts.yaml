@@ -111,11 +111,7 @@ plex_scan:
          entity: script.plex_scan
 atv_home:
   sequence:
-    - service: script.ir_tv_av1
-    - delay: 0:00:01
-    - service: shell_command.state_off
-      data_template:
-         entity: script.tv_av1
+    - service: shell_command.atv_home
 atv_plex:
   sequence:
     - service: shell_command.atv_plex
