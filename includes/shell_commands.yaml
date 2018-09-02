@@ -5,5 +5,5 @@ atv_home: /home/homeassistant/.homeassistant/scripts/atvremote.sh home
 atv_plex: /home/homeassistant/.homeassistant/scripts/atvremote.sh plex
 atv_youtube: /home/homeassistant/.homeassistant/scripts/atvremote.sh youtube
 atv_molotov: /home/homeassistant/.homeassistant/scripts/atvremote.sh molotov
-atv_molotov: /home/homeassistant/.homeassistant/scripts/atvremote.sh twitch
+atv_twitch: /home/homeassistant/.homeassistant/scripts/atvremote.sh twitch
 ...
