@@ -14,6 +14,11 @@ filter:
     - script.plex_scan
     - script.tv_plex
     - script.tv_youtube
+    - script.atv_home
+    - script.atv_plex
+    - script.atv_youtube
+    - script.atv_molotov
+    - script.atv_twitch
 entity_config:
   media_player.plex:
     feature_list:

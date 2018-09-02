@@ -263,4 +263,39 @@ tv_youtube:
     - service: shell_command.state_off
       data_template:
          entity: script.tv_youtube
+atv_home:
+  sequence:
+    - service: script.ir_tv_av1
+    - delay: 0:00:01
+    - service: shell_command.state_off
+      data_template:
+         entity: script.tv_av1
+atv_plex:
+  sequence:
+    - service: shell_command.atv_plex
+    - delay: 0:00:01
+    - service: shell_command.state_off
+      data_template:
+         entity: script.atv_plex
+atv_youtube:
+  sequence:
+    - service: shell_command.atv_youtube
+    - delay: 0:00:01
+    - service: shell_command.state_off
+      data_template:
+         entity: script.atv_youtube
+atv_molotov:
+  sequence:
+    - service: shell_command.atv_molotov
+    - delay: 0:00:01
+    - service: shell_command.state_off
+      data_template:
+         entity: script.atv_molotov
+atv_twitch:
+  sequence:
+    - service: shell_command.atv_twitch
+    - delay: 0:00:01
+    - service: shell_command.state_off
+      data_template:
+         entity: script.atv_twitch
 ...
