@@ -11,7 +11,7 @@ function atv() {
     atvremote --login_id "${LOGIN_ID}" --address "${ADDRESS}" --airplay_credentials "${AIRPLAY_CREDENTIALS}" $@
 }
 
-if [[ "${COMMAND}" == "menu" ]]; then
+if [[ "${COMMAND}" == "home" ]]; then
     atv top_menu
 elif [[ "${COMMAND}" == "plex" ]]; then
     atv top_menu

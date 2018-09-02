@@ -112,6 +112,10 @@ plex_scan:
 atv_home:
   sequence:
     - service: shell_command.atv_home
+    - delay: 0:00:01
+    - service: shell_command.state_off
+      data_template:
+         entity: script.atv_home
 atv_plex:
   sequence:
     - service: shell_command.atv_plex
