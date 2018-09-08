@@ -77,7 +77,7 @@ tv_led_off:
     - service: !secret rm_mini_send_packet
       data:
         packet:
-          - 'JgBIAAABLJUTEhITFBEUEhMSFBEUEhMSFDUUNhQ2EjcUEhE4EjgTNhQ2EjgTEhITFBESFBITEhMUEhITEjcSOBI3EzcSOBI3EgANBQ'
+          - 'JgBQAAABMJMVERQRFBEVERUQFREUERMTFDUWNBM3FTUVEBU1FDYVNBYQEjgUERQRFREUERYQFBEVNRQSFDUTNxQ2FTQWNBQ2FAAFQwABLkkUAA0FAAAAAAAAAAA'
 
 ### Actual "buttons" sent to homekit
 tv_av1:
