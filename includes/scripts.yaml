@@ -182,6 +182,9 @@ atv_twitch:
          entity: switch.atv_twitch
 led_tv_red:
   sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.led_tv
     - service: script.ir_led_tv_red
     - delay: 0:00:01
     - service: shell_command.state_off
@@ -189,6 +192,9 @@ led_tv_red:
          entity: switch.led_tv_red
 led_tv_green:
   sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.led_tv
     - service: script.ir_led_tv_green
     - delay: 0:00:01
     - service: shell_command.state_off
@@ -196,6 +202,9 @@ led_tv_green:
          entity: switch.led_tv_green
 led_tv_blue:
   sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.led_tv
     - service: script.ir_led_tv_blue
     - delay: 0:00:01
     - service: shell_command.state_off
@@ -203,6 +212,9 @@ led_tv_blue:
          entity: switch.led_tv_blue
 led_tv_white:
   sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.led_tv
     - service: script.ir_led_tv_white
     - delay: 0:00:01
     - service: shell_command.state_off
