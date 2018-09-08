@@ -89,13 +89,13 @@ ir_tv_led_green:
     - service: !secret rm_mini_send_packet
       data:
         packet:
-          - 'JgBYAAABK5UTExMSExQRFBITFBISExMTEjcTNxI4EzYSFBM3EzYTNxQTERMTNxITExMUERIVERMTNxI4ExITNxI4EzcSNxM3FAAFRQABK0oSAAxXAAEsShMADQU'
+          - 'JgBQAAABLJMTEhQRFhAUERQSFBEUERQSFDUVNRQ2EzcTEhM3EzYUNhM3FBETNxMSFBIUERMSFREUERQ2FBETNxQ2EzcUNhM3EwAFRAABLEgUAA0FAAAAAAAAAAA'
 ir_tv_led_blue:
   sequence:
     - service: !secret rm_mini_send_packet
       data:
         packet:
-          - 'JgBYAAABK5UTExMSExQRFBITFBISExMTEjcTNxI4EzYSFBM3EzYTNxQTERMTNxITExMUERIVERMTNxI4ExITNxI4EzcSNxM3FAAFRQABK0oSAAxXAAEsShMADQU'
+          - 'JgBYAAABLpQTExQREhQSExITExMSFBETFDYUNhQ2FDUTExI3EzcSOBITEjgSNxIUEhMSFBEUEhMSNxMTEhMSOBI3EzcSOBI3EgAFRgABKUsTAAxUAAEvSBUADQU'
 ir_tv_led_white:
   sequence:
     - service: !secret rm_mini_send_packet
