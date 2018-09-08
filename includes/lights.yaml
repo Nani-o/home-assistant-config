@@ -4,7 +4,7 @@
     led_tv:
       friendly_name: "LED TV"
       turn_on:
-        service: script.led_tv_on
+        service: script.ir_led_tv_on
       turn_off:
-        service: script.led_tv_off
+        service: script.ir_led_tv_off
 ...
