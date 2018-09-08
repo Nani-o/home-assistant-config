@@ -17,6 +17,7 @@ filter:
     - script.atv_youtube
     - script.atv_molotov
     - script.atv_twitch
+    - light.tv_led
 entity_config:
   media_player.plex:
     feature_list:

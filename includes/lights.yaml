@@ -1,0 +1,8 @@
+- platform: template
+  lights:
+    tv_led:
+      friendly_name: "TV - LED"
+      turn_on:
+        service: script.tv_led_on
+      turn_off:
+        service: script.tv_led_off

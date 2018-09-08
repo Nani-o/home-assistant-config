@@ -66,6 +66,18 @@ ir_tv_right:
       data:
         packet:
           - 'JgBQAAABKJMSEhISEjcSEhISEhISEhISEjcSNxISEjcSNxI3EjcSNxISEjcSNxISEhISEhISEhISNxISEhISNxI3EjcSNxI3EgAFGgABKEoSAAxWDQUAAAAAAAA='
+tv_led_on:
+  sequence:
+    - service: !secret rm_mini_send_packet
+      data:
+        packet:
+          - 'JgBIAAABLJUTEhITFBEUEhMSFBEUEhMSFDUUNhQ2EjcUEhE4EjgTNhQ2EjgTEhITFBESFBITEhMUEhITEjcSOBI3EzcSOBI3EgANBQ'
+tv_led_off:
+  sequence:
+    - service: !secret rm_mini_send_packet
+      data:
+        packet:
+          - 'JgBIAAABLJUTEhITFBEUEhMSFBEUEhMSFDUUNhQ2EjcUEhE4EjgTNhQ2EjgTEhITFBESFBITEhMUEhITEjcSOBI3EzcSOBI3EgANBQ'
 
 ### Actual "buttons" sent to homekit
 tv_av1:

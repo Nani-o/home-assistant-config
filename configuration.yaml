@@ -25,5 +25,5 @@ media_player: !include includes/media_players.yaml
 script: !include includes/scripts.yaml
 shell_command: !include includes/shell_commands.yaml
 switch: !include includes/switches.yaml
-
+light: !include includes/lights.yaml
 homekit: !include includes/homekit.yaml
