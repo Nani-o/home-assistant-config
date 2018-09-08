@@ -66,37 +66,37 @@ ir_tv_right:
       data:
         packet:
           - 'JgBQAAABKJMSEhISEjcSEhISEhISEhISEjcSNxISEjcSNxI3EjcSNxISEjcSNxISEhISEhISEhISNxISEhISNxI3EjcSNxI3EgAFGgABKEoSAAxWDQUAAAAAAAA='
-tv_led_on:
+ir_led_tv_on:
   sequence:
     - service: !secret rm_mini_send_packet
       data:
         packet:
           - 'JgBIAAABLJUTEhITFBEUEhMSFBEUEhMSFDUUNhQ2EjcUEhE4EjgTNhQ2EjgTEhITFBESFBITEhMUEhITEjcSOBI3EzcSOBI3EgANBQ'
-tv_led_off:
+ir_led_tv_off:
   sequence:
     - service: !secret rm_mini_send_packet
       data:
         packet:
           - 'JgBQAAABMJMVERQRFBEVERUQFREUERMTFDUWNBM3FTUVEBU1FDYVNBYQEjgUERQRFREUERYQFBEVNRQSFDUTNxQ2FTQWNBQ2FAAFQwABLkkUAA0FAAAAAAAAAAA'
-ir_tv_led_red:
+ir_led_tv_red:
   sequence:
     - service: !secret rm_mini_send_packet
       data:
         packet:
           - 'JgBYAAABK5UTExMSExQRFBITFBISExMTEjcTNxI4EzYSFBM3EzYTNxQTERMTNxITExMUERIVERMTNxI4ExITNxI4EzcSNxM3FAAFRQABK0oSAAxXAAEsShMADQU'
-ir_tv_led_green:
+ir_led_tv_green:
   sequence:
     - service: !secret rm_mini_send_packet
       data:
         packet:
           - 'JgBQAAABLJMTEhQRFhAUERQSFBEUERQSFDUVNRQ2EzcTEhM3EzYUNhM3FBETNxMSFBIUERMSFREUERQ2FBETNxQ2EzcUNhM3EwAFRAABLEgUAA0FAAAAAAAAAAA'
-ir_tv_led_blue:
+ir_led_tv_blue:
   sequence:
     - service: !secret rm_mini_send_packet
       data:
         packet:
           - 'JgBYAAABLpQTExQREhQSExITExMSFBETFDYUNhQ2FDUTExI3EzcSOBITEjgSNxIUEhMSFBEUEhMSNxMTEhMSOBI3EzcSOBI3EgAFRgABKUsTAAxUAAEvSBUADQU'
-ir_tv_led_white:
+ir_led_tv_white:
   sequence:
     - service: !secret rm_mini_send_packet
       data:
@@ -110,102 +110,102 @@ tv_av1:
     - delay: 0:00:01
     - service: shell_command.state_off
       data_template:
-         entity: script.tv_av1
+         entity: switch.tv_av1
 tv_av2:
   sequence:
     - service: script.ir_tv_av2
     - delay: 0:00:01
     - service: shell_command.state_off
       data_template:
-         entity: script.tv_av2
+         entity: switch.tv_av2
 tv_hdmi1:
   sequence:
     - service: script.ir_tv_hdmi1
     - delay: 0:00:01
     - service: shell_command.state_off
       data_template:
-         entity: script.tv_hdmi1
+         entity: switch.tv_hdmi1
 tv_hdmi2:
   sequence:
     - service: script.ir_tv_hdmi2
     - delay: 0:00:01
     - service: shell_command.state_off
       data_template:
-         entity: script.tv_hdmi2
+         entity: switch.tv_hdmi2
 tv_play_pause:
   sequence:
     - service: script.ir_tv_play_pause
     - delay: 0:00:01
     - service: shell_command.state_off
       data_template:
-         entity: script.tv_play_pause
+         entity: switch.tv_play_pause
 plex_scan:
   sequence:
     - service: shell_command.plex_scan
     - service: shell_command.state_off
       data_template:
-         entity: script.plex_scan
+         entity: switch.plex_scan
 atv_home:
   sequence:
     - service: shell_command.atv_home
     - delay: 0:00:01
     - service: shell_command.state_off
       data_template:
-         entity: script.atv_home
+         entity: switch.atv_home
 atv_plex:
   sequence:
     - service: shell_command.atv_plex
     - delay: 0:00:01
     - service: shell_command.state_off
       data_template:
-         entity: script.atv_plex
+         entity: switch.atv_plex
 atv_youtube:
   sequence:
     - service: shell_command.atv_youtube
     - delay: 0:00:01
     - service: shell_command.state_off
       data_template:
-         entity: script.atv_youtube
+         entity: switch.atv_youtube
 atv_molotov:
   sequence:
     - service: shell_command.atv_molotov
     - delay: 0:00:01
     - service: shell_command.state_off
       data_template:
-         entity: script.atv_molotov
+         entity: switch.atv_molotov
 atv_twitch:
   sequence:
     - service: shell_command.atv_twitch
     - delay: 0:00:01
     - service: shell_command.state_off
       data_template:
-         entity: script.atv_twitch
-tv_led_red:
+         entity: switch.atv_twitch
+led_tv_red:
   sequence:
-    - service: script.ir_tv_led_red
+    - service: script.ir_led_tv_red
     - delay: 0:00:01
     - service: shell_command.state_off
       data_template:
-         entity: script.tv_led_red
-tv_led_green:
+         entity: switch.led_tv_red
+led_tv_green:
   sequence:
-    - service: script.ir_tv_led_green
+    - service: script.ir_led_tv_green
     - delay: 0:00:01
     - service: shell_command.state_off
       data_template:
-         entity: script.tv_led_green
-tv_led_blue:
+         entity: switch.led_tv_green
+led_tv_blue:
   sequence:
-    - service: script.ir_tv_led_blue
+    - service: script.ir_led_tv_blue
     - delay: 0:00:01
     - service: shell_command.state_off
       data_template:
-         entity: script.tv_led_blue
-tv_led_white:
+         entity: switch.led_tv_blue
+led_tv_white:
   sequence:
-    - service: script.ir_tv_led_white
+    - service: script.ir_led_tv_white
     - delay: 0:00:01
     - service: shell_command.state_off
       data_template:
-         entity: script.tv_led_white
+         entity: switch.led_tv_white
 ...

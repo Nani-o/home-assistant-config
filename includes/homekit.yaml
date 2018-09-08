@@ -6,22 +6,22 @@ filter:
     - device_tracker
   include_entities:
     - switch.tv_lg
-    - script.tv_av1
-    - script.tv_av2
-    - script.tv_hdmi1
-    - script.tv_hdmi2
-    - script.tv_play_pause
-    - script.plex_scan
-    - script.atv_home
-    - script.atv_plex
-    - script.atv_youtube
-    - script.atv_molotov
-    - script.atv_twitch
-    - light.tv_led
-    - script.tv_led_red
-    - script.tv_led_green
-    - script.tv_led_blue
-    - script.tv_led_white
+    - switch.tv_av1
+    - switch.tv_av2
+    - switch.tv_hdmi1
+    - switch.tv_hdmi2
+    - switch.tv_play_pause
+    - switch.plex_scan
+    - switch.atv_home
+    - switch.atv_plex
+    - switch.atv_youtube
+    - switch.atv_molotov
+    - switch.atv_twitch
+    - light.led_tv
+    - switch.led_tv_red
+    - switch.led_tv_green
+    - switch.led_tv_blue
+    - switch.led_tv_white
 entity_config:
   media_player.plex:
     feature_list:
