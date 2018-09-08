@@ -18,6 +18,10 @@ filter:
     - script.atv_molotov
     - script.atv_twitch
     - light.tv_led
+    - script.tv_led_red
+    - script.tv_led_green
+    - script.tv_led_blue
+    - script.tv_led_white
 entity_config:
   media_player.plex:
     feature_list:

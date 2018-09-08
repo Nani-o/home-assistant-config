@@ -78,6 +78,30 @@ tv_led_off:
       data:
         packet:
           - 'JgBQAAABMJMVERQRFBEVERUQFREUERMTFDUWNBM3FTUVEBU1FDYVNBYQEjgUERQRFREUERYQFBEVNRQSFDUTNxQ2FTQWNBQ2FAAFQwABLkkUAA0FAAAAAAAAAAA'
+ir_tv_led_red:
+  sequence:
+    - service: !secret rm_mini_send_packet
+      data:
+        packet:
+          - 'JgBYAAABK5UTExMSExQRFBITFBISExMTEjcTNxI4EzYSFBM3EzYTNxQTERMTNxITExMUERIVERMTNxI4ExITNxI4EzcSNxM3FAAFRQABK0oSAAxXAAEsShMADQU'
+ir_tv_led_green:
+  sequence:
+    - service: !secret rm_mini_send_packet
+      data:
+        packet:
+          - 'JgBYAAABK5UTExMSExQRFBITFBISExMTEjcTNxI4EzYSFBM3EzYTNxQTERMTNxITExMUERIVERMTNxI4ExITNxI4EzcSNxM3FAAFRQABK0oSAAxXAAEsShMADQU'
+ir_tv_led_blue:
+  sequence:
+    - service: !secret rm_mini_send_packet
+      data:
+        packet:
+          - 'JgBYAAABK5UTExMSExQRFBITFBISExMTEjcTNxI4EzYSFBM3EzYTNxQTERMTNxITExMUERIVERMTNxI4ExITNxI4EzcSNxM3FAAFRQABK0oSAAxXAAEsShMADQU'
+ir_tv_led_white:
+  sequence:
+    - service: !secret rm_mini_send_packet
+      data:
+        packet:
+          - 'JgBQAAABLJUTExMSExITExMSExITExMSEjgSOBI3EjgTExI3EzcTNhM3EzcTNhMTExISFBMSEhMTExMTEhITNxM3EzYTNxM3EwAFQwABLEoTAA0FAAAAAAAAAAA'
 
 ### Actual "buttons" sent to homekit
 tv_av1:
@@ -156,4 +180,32 @@ atv_twitch:
     - service: shell_command.state_off
       data_template:
          entity: script.atv_twitch
+tv_led_red:
+  sequence:
+    - service: script.ir_tv_led_red
+    - delay: 0:00:01
+    - service: shell_command.state_off
+      data_template:
+         entity: script.tv_led_red
+tv_led_green:
+  sequence:
+    - service: script.ir_tv_led_green
+    - delay: 0:00:01
+    - service: shell_command.state_off
+      data_template:
+         entity: script.tv_led_green
+tv_led_blue:
+  sequence:
+    - service: script.ir_tv_led_blue
+    - delay: 0:00:01
+    - service: shell_command.state_off
+      data_template:
+         entity: script.tv_led_blue
+tv_led_white:
+  sequence:
+    - service: script.ir_tv_led_white
+    - delay: 0:00:01
+    - service: shell_command.state_off
+      data_template:
+         entity: script.tv_led_white
 ...
