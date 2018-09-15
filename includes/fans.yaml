@@ -18,8 +18,8 @@
             - 'JgAkAEoXGRgZLRktGRcZFxgYGRcZGBgZGS0ZLRkYGRcYLRkXGAANBQAAAAA='
       set_direction:
         service: script.turn_on
-        data_template: >
-          entity_id:
+        data_template:
+          entity_id: >
             {% if direction == 'reverse' %}
               script.dyson_fan_cool
             {% elif direction == 'forward %}
