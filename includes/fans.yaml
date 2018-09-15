@@ -22,7 +22,7 @@
           entity_id: >
             {% if direction == 'reverse' %}
               script.dyson_fan_cool
-            {% elif direction == 'forward %}
+            {% elif direction == 'forward' %}
               script.dyson_fan_hot
             {% endif %}
 ...
