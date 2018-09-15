@@ -8,15 +8,9 @@
       oscillating_template: "{{ states('input_select.osc') }}"
       direction_template: "{{ states('input_select.direction') }}"
       turn_on:
-        service: !secret rm_mini_send_packet
-        data:
-          packet:
-            - 'JgBIAEkYGRgYLhguGRgYGBcYGRcYGhgYGRgYGBgYGBgYGBguGAAMyEgZGBgYLxguFxkYGBcZGBcZGRgZGBgYGRcZGBgYGBgtGAANBQ=='
+        service: script.dyson_fan_on
       turn_off:
-        service: !secret rm_mini_send_packet
-        data:
-          packet:
-            - 'JgBIAEkYGRgYLhguGRgYGBcYGRcYGhgYGRgYGBgYGBgYGBguGAAMyEgZGBgYLxguFxkYGBcZGBcZGRgZGBgYGRcZGBgYGBgtGAANBQ=='
+        service: script.dyson_fan_off
       set_speed:
         service: script.fan_speed
         data_template:

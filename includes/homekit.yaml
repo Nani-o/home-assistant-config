@@ -22,7 +22,6 @@ filter:
     - switch.led_tv_green
     - switch.led_tv_blue
     - switch.led_tv_white
-    - light.prise_ventilateur
 entity_config:
   media_player.plex:
     feature_list:
