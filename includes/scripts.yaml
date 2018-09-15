@@ -231,6 +231,10 @@ dyson_fan_on:
           - 'JgBIAEkYGRgYLhguGRgYGBcYGRcYGhgYGRgYGBgYGBgYGBguGAAMyEgZGBgYLxguFxkYGBcZGBcZGRgZGBgYGRcZGBgYGBgtGAANBQ=='
 dyson_fan_off:
   sequence:
+    - service: !secret rm_mini_send_packet
+      data:
+        packet:
+          - 'JgBIAEkYGRgYLhguGRgYGBcYGRcYGhgYGRgYGBgYGBgYGBguGAAMyEgZGBgYLxguFxkYGBcZGBcZGRgZGBgYGRcZGBgYGBgtGAANBQ=='
     - service: light.turn_off
       data:
         entity_id: light.prise_ventilateur
