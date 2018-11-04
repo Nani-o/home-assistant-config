@@ -2,5 +2,6 @@
 - platform: ping
   hosts:
     lg_tv: !secret lg_tv_ip
-  consider_home: 15
+    pc: !secret pc_ip
+  consider_home: 12
 ...

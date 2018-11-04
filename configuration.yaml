@@ -19,6 +19,7 @@ sun:
 sensor:
   - platform: yr
 
+automation: !include includes/automations.yaml
 device_tracker: !include includes/device_trackers.yaml
 fan: !include includes/fans.yaml
 media_player: !include includes/media_players.yaml

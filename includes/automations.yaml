@@ -1,0 +1,12 @@
+---
+- alias: PC shutdown
+  trigger:
+    - platform: state
+      entity_id: device_tracker.pc
+      from: 'home'
+      to: 'not_home'
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: light.bureau
+...
