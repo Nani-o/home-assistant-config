@@ -3,5 +3,5 @@
   hosts:
     lg_tv: !secret lg_tv_ip
     pc: !secret pc_ip
-  consider_home: 12
+  consider_home: 15
 ...
