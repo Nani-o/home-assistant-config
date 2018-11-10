@@ -6,6 +6,7 @@ filter:
     - device_tracker
   include_entities:
     - switch.tv_lg
+    - switch.pc
     - switch.tv_av1
     - switch.tv_av2
     - switch.tv_hdmi1
