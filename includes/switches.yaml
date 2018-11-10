@@ -127,4 +127,11 @@
         service: script.led_tv_white
       turn_off:
         service: script.led_tv_white
+    pc:
+      friendly_name: "PC"
+      value_template: "{{ is_state('device_tracker.pc', 'home') }}"
+      turn_on:
+        service: shell_command.pc_on
+      turn_off:
+        service: shell_command.pc_off
 ...
