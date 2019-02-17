@@ -19,6 +19,7 @@ filter:
     - switch.atv_molotov
     - switch.atv_twitch
     - light.led_tv
+    - light.lava_lampe
     - switch.led_tv_red
     - switch.led_tv_green
     - switch.led_tv_blue
