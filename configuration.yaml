@@ -7,7 +7,6 @@ homeassistant:
   time_zone: !secret time_zone
   customize: !include customize.yaml
 
-introduction:
 frontend:
 config:
 http:
