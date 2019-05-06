@@ -5,12 +5,20 @@ dist: xenial
 python:
   - "3.5"
 
+env:
+  - hass_version: latest
+  - hass_version: 0.91.4
+  - hass_version: 0.90.2
+
 before_install:
   - mv travis_secrets.yaml secrets.yaml
-#  - pip install python-gilt
-#  - gilt overlay
+  - 'if [[ "$hass_version" == "latest" ]]; then
+       package_name="homeassistant";
+     else
+       package_name="homeassistant==$hass_version";
+     fi'
 install:
-  - pip3 install homeassistant
+  - pip3 install $package_name
 script:
   - hass -c . --script check_config
 ...
