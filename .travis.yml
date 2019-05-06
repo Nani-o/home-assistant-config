@@ -7,8 +7,8 @@ python:
 
 before_install:
   - mv travis_secrets.yaml secrets.yaml
-  - pip install python-gilt
-  - gilt overlay
+#  - pip install python-gilt
+#  - gilt overlay
 install:
   - pip3 install homeassistant
 script:
