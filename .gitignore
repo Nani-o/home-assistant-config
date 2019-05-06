@@ -6,6 +6,7 @@
 !scripts/
 !scenes
 !.gitignore
+!.gitattributes
 !README.md
 !gilt.yml
 secrets.yaml
