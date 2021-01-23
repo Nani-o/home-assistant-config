@@ -11,6 +11,7 @@ homeassistant:
      api_password: !secret http_password
 
 frontend:
+mobile_app:
 config:
 http:
 discovery:
