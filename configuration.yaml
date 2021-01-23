@@ -28,5 +28,5 @@ script: !include includes/scripts.yaml
 shell_command: !include includes/shell_commands.yaml
 switch: !include includes/switches.yaml
 light: !include includes/lights.yaml
-hue: !include includes/hue.yaml
+#hue: !include includes/hue.yaml
 homekit: !include includes/homekit.yaml
