@@ -12,9 +12,6 @@ mobile_app:
 config:
 http:
 discovery:
-history:
-logbook:
-sun:
 sensor:
   - platform: yr
 
