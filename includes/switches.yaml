@@ -5,6 +5,9 @@
     - name: TV POWER
       command_on: 'JgBYAAABIJISExETETcSEhISEhQQFBETETcROBESEjcRNhM1EjcTNRMTERISNxEUERMSExE2EjYSNhM2EhIROBE3ETcREhITEgAFGwABH0oSAAwzAAEfShEADQU='
       command_off: 'JgBYAAABHpISEhMSETYTEhATEhQREhMSEDgRNxISEjcRNxE1EjcSNhM1EhISNhEUERETEhI1EjcSEhE4ExARNxI3ETYTERMSEQAFGAABIEgTAAwpAAEfSRIADQU='
+    - name: DYSON POWER
+      command_on: 'JgBIAEkYGRgYLhguGRgYGBcYGRcYGhgYGRgYGBgYGBgYGBguGAAMyEgZGBgYLxguFxkYGBcZGBcZGRgZGBgYGRcZGBgYGBgtGAANBQ=='
+      command_off: 'JgBIAEkYGRgYLhguGRgYGBcYGRcYGhgYGRgYGBgYGBgYGBguGAAMyEgZGBgYLxguFxkYGBcZGBcZGRgZGBgYGRcZGBgYGBgtGAANBQ=='
 
 - platform: template
   switches:
@@ -17,111 +20,6 @@
       turn_off:
         service: switch.turn_off
         entity_id: switch.tv_power
-    tv_av1:
-      value_template: "off"
-      friendly_name: "TV - AV1"
-      turn_on:
-        service: script.tv_av1
-      turn_off:
-        service: script.tv_av1
-    tv_av2:
-      value_template: "off"
-      friendly_name: "TV - AV2"
-      turn_on:
-        service: script.tv_av2
-      turn_off:
-        service: script.tv_av2
-    tv_hdmi1:
-      value_template: "off"
-      friendly_name: "TV - HDMI1"
-      turn_on:
-        service: script.tv_hdmi1
-      turn_off:
-        service: script.tv_hdmi1
-    tv_hdmi2:
-      value_template: "off"
-      friendly_name: "TV - HDMI2"
-      turn_on:
-        service: script.tv_hdmi2
-      turn_off:
-        service: script.tv_hdmi2
-    tv_play_pause:
-      value_template: "off"
-      friendly_name: "TV - Lecture"
-      turn_on:
-        service: script.tv_play_pause
-      turn_off:
-        service: script.tv_play_pause
-    plex_scan:
-      value_template: "off"
-      friendly_name: "Plex - Scan"
-      turn_on:
-        service: script.plex_scan
-      turn_off:
-        service: script.plex_scan
-    atv_home:
-      value_template: "off"
-      friendly_name: "ATV - Home"
-      turn_on:
-        service: script.atv_home
-      turn_off:
-        service: script.atv_home
-    atv_plex:
-      value_template: "off"
-      friendly_name: "ATV - Plex"
-      turn_on:
-        service: script.atv_plex
-      turn_off:
-        service: script.atv_plex
-    atv_youtube:
-      value_template: "off"
-      friendly_name: "ATV - Youtube"
-      turn_on:
-        service: script.atv_youtube
-      turn_off:
-        service: script.atv_youtube
-    atv_molotov:
-      value_template: "off"
-      friendly_name: "ATV - Molotov"
-      turn_on:
-        service: script.atv_molotov
-      turn_off:
-        service: script.atv_molotov
-    atv_twitch:
-      value_template: "off"
-      friendly_name: "ATV - Twitch"
-      turn_on:
-        service: script.atv_twitch
-      turn_off:
-        service: script.atv_twitch
-    led_tv_red:
-      value_template: "off"
-      friendly_name: "LED TV - Rouge"
-      turn_on:
-        service: script.led_tv_red
-      turn_off:
-        service: script.led_tv_red
-    led_tv_green:
-      value_template: "off"
-      friendly_name: "LED TV - Vert"
-      turn_on:
-        service: script.led_tv_green
-      turn_off:
-        service: script.led_tv_green
-    led_tv_blue:
-      value_template: "off"
-      friendly_name: "LED TV - Bleu"
-      turn_on:
-        service: script.led_tv_blue
-      turn_off:
-        service: script.led_tv_blue
-    led_tv_white:
-      value_template: "off"
-      friendly_name: "LED TV - Blanc"
-      turn_on:
-        service: script.led_tv_white
-      turn_off:
-        service: script.led_tv_white
     pc:
       friendly_name: "PC"
       value_template: "{{ is_state('device_tracker.pc', 'home') }}"

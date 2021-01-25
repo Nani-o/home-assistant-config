@@ -1,32 +1,10 @@
 ---
 filter:
   include_domains:
-    - media_player
     - fan
     - device_tracker
   include_entities:
     - switch.tv_lg
     - switch.pc
-    - switch.tv_av1
-    - switch.tv_av2
-    - switch.tv_hdmi1
-    - switch.tv_hdmi2
-    - switch.tv_play_pause
-    - switch.plex_scan
-    - switch.atv_home
-    - switch.atv_plex
-    - switch.atv_youtube
-    - switch.atv_molotov
-    - switch.atv_twitch
-    - light.led_tv
-    - light.lava_lampe
-    - switch.led_tv_red
-    - switch.led_tv_green
-    - switch.led_tv_blue
-    - switch.led_tv_white
-entity_config:
-  media_player.plex:
-    feature_list:
-      - feature: on_off
-      - feature: play_pause
+    - light.coke_clock
 ...
