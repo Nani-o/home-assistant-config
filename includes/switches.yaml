@@ -2,9 +2,7 @@
 - platform: broadlink
   mac: !secret rm_mini_mac
   switches:
-    # Will work on most LG TVs
-    tv_lg_power:
-      friendly_name: "TV Power"
+    - name: TV
       command_on: 'JgBYAAABIJISExETETcSEhISEhQQFBETETcROBESEjcRNhM1EjcTNRMTERISNxEUERMSExE2EjYSNhM2EhIROBE3ETcREhITEgAFGwABH0oSAAwzAAEfShEADQU='
       command_off: 'JgBYAAABHpISEhMSETYTEhATEhQREhMSEDgRNxISEjcRNxE1EjcSNhM1EhISNhEUERETEhI1EjcSEhE4ExARNxI3ETYTERMSEQAFGAABIEgTAAwpAAEfSRIADQU='
 
