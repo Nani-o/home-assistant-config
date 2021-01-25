@@ -2,7 +2,7 @@
 - platform: broadlink
   mac: !secret rm_mini_mac
   switches:
-    - name: TV
+    - name: TV POWER
       command_on: 'JgBYAAABIJISExETETcSEhISEhQQFBETETcROBESEjcRNhM1EjcTNRMTERISNxEUERMSExE2EjYSNhM2EhIROBE3ETcREhITEgAFGwABH0oSAAwzAAEfShEADQU='
       command_off: 'JgBYAAABHpISEhMSETYTEhATEhQREhMSEDgRNxISEjcRNxE1EjcSNhM1EhISNhEUERETEhI1EjcSEhE4ExARNxI3ETYTERMSEQAFGAABIEgTAAwpAAEfSRIADQU='
 
@@ -13,10 +13,10 @@
       value_template: "{{ is_state('device_tracker.lg_tv', 'home') }}"
       turn_on:
         service: switch.turn_on
-        entity_id: switch.tv_lg_power
+        entity_id: switch.tv_power
       turn_off:
         service: switch.turn_off
-        entity_id: switch.tv_lg_power
+        entity_id: switch.tv_power
     tv_av1:
       value_template: "off"
       friendly_name: "TV - AV1"
