@@ -1,4 +1,5 @@
 ---
+advertise_ip: !secret mizuho_ip
 filter:
   include_domains:
     - fan
