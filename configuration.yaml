@@ -13,7 +13,6 @@ config:
 http:
 discovery:
 sensor:
-  - platform: yr
 
 device_tracker: !include includes/device_trackers.yaml
 fan: !include includes/fans.yaml

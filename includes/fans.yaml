@@ -4,7 +4,6 @@
     dyson_fan:
       friendly_name: "Ventilateur"
       value_template: "{{ states('input_boolean.state') }}"
-      speed_template: "{{ states('input_select.speed') }}"
       oscillating_template: "{{ states('input_select.osc') }}"
       direction_template: "{{ states('input_select.direction') }}"
       turn_on:
