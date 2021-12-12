@@ -3,7 +3,6 @@ advertise_ip: !secret mizuho_ip
 filter:
   include_domains:
     - fan
-    - device_tracker
   include_entities:
     - switch.tv_lg
     - switch.pc
